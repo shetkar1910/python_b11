@@ -10,3 +10,7 @@ skddhs
 asdhsa
 
 sadjsa
+
+This is a plain text file 
+
+Hello World
