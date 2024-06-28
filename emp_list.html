@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  
+    <h1>Employee List</h1>
+
+    {% if all_emp %}
+    <table border="1px">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+      {% for emp in all_emp %}
+      <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.salary}}</td>
+        <td><a href="/emp-details/{{emp.id}}">Details</a>
+        <a href="/emp-update/{{emp.id}}">Update</a>
+        <a href="/emp-delete/{{emp.id}}">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}No Data Found {% endif %}
+
+    <hr>
+    <a href="/home">Home</a>
+  </body>
+</html>
