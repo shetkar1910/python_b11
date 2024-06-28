@@ -1,7 +1,9 @@
-
+from .constants import USERNAME, PASSWORD
 
 def login(user, password):
-    pass
+    if user == USERNAME and password == PASSWORD:
+        print("logged in successfully")
+
 
 def logout():
-    print("user logged in successfully")
+    print("user logged out successfully")
