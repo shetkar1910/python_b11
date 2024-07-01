@@ -6,3 +6,7 @@ def login(user, password):
 
 def logout():
     print("Logged Out.")
+
+
+def register(user, pswd, email, mob):
+    print("Registered")
